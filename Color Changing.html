@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://127.0.0.1:5500/color%20flipper/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Color Changing</title>
+    <style>
+        #colors {
+            font-size: 40px;
+            font-weight: 900;
+            font-style: italic;
+            color: darkmagenta
+        }
+
+        #green {
+            background-color: green;
+            border-radius: 5px;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 120px;
+            height: 50px;
+
+        }
+
+        #red {
+            background-color: red;
+            border-radius: 5px;
+            font-size: 30px;
+            margin: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 130px;
+            height: 50px;
+
+        }
+
+        #blue {
+            background-color: blue;
+            border-radius: 5px;
+            font-size: 30px;
+            margin: 1px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 130px;
+            height: 50px;
+        }
+
+        #black {
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            font-size: 30px;
+            margin: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            width: 150px;
+            height: 50px;
+        }
+
+        #rat {
+            border-radius: 1000px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="colors">Color Changing</div>
+    <button id="green">Green</button>
+    <button id="red">Red</button>
+    <button id="blue">Blue</button>
+    <button id="black">Black</button>
+    <img src="./Color Changing_files/1cd6344b970189835aa0a4c0111f9de3.jpg" id="rat">
+    <script src="./Color Changing_files/index.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>
